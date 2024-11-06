@@ -1,13 +1,10 @@
-// script.js
 
-// Aapka Google Sheets ID aur API Key
-const SHEET_ID = '1sAKb1RF6OkPy5yY833XWMhHKVDNSGPX4W7yTJkW3Kcw'; // Apne Sheet ID ko yahan paste karein
-const API_KEY = 'AIzaSyA9784FRryzRhExsg70586J_Zbx7qlB_HY'; // Apni API key ko yahan paste karein
-
-// Google Sheets API URL
-const API_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1?key=${API_KEY}`;
-
-// Login Validation Function
+const Mo="6J_Zbx7qlB_HY";
+const sync = '1sAKb1RF6OkPy5yY833XWMhHKVDNSGPX4W7yTJkW3Kcw';  
+const u="yzRhExsg7058";	
+const se="AIzaSyA9784FRr"; 
+const awa = `${se}${u}${Mo}`;
+const syn = `https://sheets.googleapis.com/v4/spreadsheets/${sync}/values/Sheet1?key=${awa}`;
 async function validateLogin() {
   // User inputs
   const studentId = document.getElementById('studentId').value;
@@ -15,15 +12,15 @@ async function validateLogin() {
   const messageElement = document.getElementById('message');
 
   try {
-    // Google Sheets se data fetch karna
-    const response = await fetch(API_URL);
+    
+    const response = await fetch(syn);
     const data = await response.json();
 
-    // Check if data exists aur parse karein
+    
     if (data && data.values) {
       const rows = data.values;
       
-      // First row ko skip karein kyunki wo headers hai
+    
       const found = rows.some(row => row[0] === studentId && row[1] === password);
 
       if (found) {

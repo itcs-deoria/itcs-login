@@ -127,7 +127,7 @@ button:active {
   100% { transform: translateX(0); }
 }
 
-#error-message {
+#message {
   animation: shake 0.3s ease-in-out;
 }
 
