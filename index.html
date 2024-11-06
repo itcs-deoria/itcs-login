@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>ITCS</h2>
+    <form id="loginForm">
+      <label for="studentId" name="studentId" class="label" >Student ID:</label>
+      <input type="text" id="studentId" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="button" onclick="validateLogin()">Login</button>
+    </form>
+    <p id="message"></p>
+  </div>
+<!-- Footer Section -->
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="https://yourwebsite.com" target="_blank">Your Website</a>
+  </div>
+  <p>&copy; 2024 Your Computer Center. All rights reserved.</p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
